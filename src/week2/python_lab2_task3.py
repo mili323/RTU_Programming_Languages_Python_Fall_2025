@@ -25,7 +25,8 @@ operator_counts = {}
 
 # TODO: Count operator occurrences
 for char in expression:
-    pass  # check if char in operators, update counts
+    if char in operators:
+        operator_counts[char] = operator_counts.get(char, 0) + 1
 
 # TODO: Print results
 print("Operator counts:", operator_counts)
